@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #6f66e7;
+  --light: #ddd;
+  --bg-light: #f1f1f1;
+}
+
+body {
+  background: var(--bg-light);
+}
+
+.main-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.form-container {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+label {
+  width: 80px;
+  float: left;
+  margin-top: 10px;
+}
+input[type="username"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  border: 2px solid var(--light);
+  border-radius: 5px;
+  font-family: Poppins;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--primary-color);
+}
+.form-container button {
+  padding: 0.5rem 1.1rem;
+  font-weight: 300;
+  width: 95%;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  text-transform: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+.form-container button:hover,
+.form-container button:focus {
+  background: var(--primary-color);
+  color: var(--light);
+  border: 1px solid var(--light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: var(--light);
+  outline: none;
+  margin-top: 1.5rem;
+}
+.cta:hover,
+.cta:focus {
+  background-color: #3d32df;
+}
+
+.form-container button:active {
+  animation: press 0.2s;
+}
+.form-container h1{
+  text-align: center;
+}
+
+.gradient {
+  height: 88vh;
+  max-height: 88vh;
+  z-index: -1;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  width: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+label {
+  display: flex;
+  align-items: center;
+}
